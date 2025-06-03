@@ -1,0 +1,1011 @@
+* ====================== */
+/*    Réinitialisation    */
+/* ====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ====================== */
+/*     Styles Généraux    */
+/* ====================== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f7f3; /* Fond clair avec une légère teinte verte, très doux pour les yeux */
+  color: #2c3e33;       /* Vert-gris foncé, pour une bonne lisibilité */
+  overflow-x: hidden;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ====================== */
+/*        Navigation      */
+/* ====================== */
+.navbar {
+  background-color: #3a4f41; /* Vert foncé professionnel */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  color: #f0f5f0; /* Presque blanc, mais légèrement teinté pour un rendu plus doux */
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #e8f0ea; /* Vert très clair, élégant */
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-links a:hover {
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+
+/* ====================== */
+/*     Bouton Thème       */
+/* ====================== */
+.theme-btn {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #e8f0ea; /* Harmonisé avec les liens de navigation */
+  margin-left: 1em;
+}
+
+/* ====================== */
+/*        Horloge         */
+/* ====================== */
+.clock {
+  font-size: 1em;
+  color: #dfeae3; /* Ton doux, cohérent avec le reste */
+  margin-left: 20px;
+  padding: 0 1em;
+  align-self: center;
+}
+
+/* ====================== */
+/*   Sections Générales   */
+/* ====================== */
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  color: #3b4b40; /* Vert-gris foncé, élégant */
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* ====================== */
+/*   Présentation (Hero)  */
+/* ====================== */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: radial-gradient(circle at top, #f0f5f0, #b6d3b0); /* Vert très doux */
+  color: #1f1f1f;
+  transition: all 0.5s ease;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Effet machine à écrire */
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: .15em solid #1f1f1f;
+  white-space: nowrap;
+  letter-spacing: .1em;
+  animation: typing 3s steps(20, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #1f1f1f }
+}
+
+/* ====================== */
+/*   Apprentissage        */
+/* ====================== */
+.apprentissage-intro {
+  background: #e8ece9; /* Gris-vert doux */
+  border: 2px dashed #3a4f41;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 750px;
+  font-family: 'Segoe UI', sans-serif;
+  transform: rotate(-1.5deg);
+  box-shadow: 4px 4px 0 #3a4f41;
+}
+
+.apprentissage-intro h2 {
+  color: #2c3e33;
+  margin-bottom: 1rem;
+}
+
+/* ====================== */
+/*        Fun Fact        */
+/* ====================== */
+#funfact {
+  background: #d6eedb; /* Vert clair doux */
+  padding: 40px 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+#funfact h2 {
+  color: #2c3e33;
+  margin-bottom: 10px;
+}
+
+#fact-text {
+  font-style: italic;
+  color: #4a5a50;
+  margin-bottom: 15px;
+}
+
+#new-fact {
+  background-color: #3a4f41; /* Vert foncé professionnel */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+#new-fact:hover {
+  transform: scale(1.05);
+  background-color: #2d3e34; /* Variation plus sombre au survol */
+}
+
+/* ====================== */
+/*   Compétences          */
+/* ====================== */
+
+/* Compétences Techniques */
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill p {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #2b2b2b;
+}
+
+.progress {
+  background: #dcdedc;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #5b8d69, #a9c9a4); /* Vert professionnel, dégradé subtil */
+  transition: width 1.5s ease-in-out;
+}
+
+/* Compétences Personnelles (Cercles) */
+#personal-skills .circle-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-item {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #3d5245;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.circle-item:hover {
+  transform: scale(1.1);
+  background-color: #2e3e34;
+}
+
+/* Positions circulaires */
+.circle-item:nth-child(2) { transform: rotate(0deg) translate(120px) rotate(0deg); }
+.circle-item:nth-child(3) { transform: rotate(90deg) translate(120px) rotate(-90deg); }
+.circle-item:nth-child(4) { transform: rotate(180deg) translate(120px) rotate(-180deg); }
+.circle-item:nth-child(5) { transform: rotate(270deg) translate(120px) rotate(-270deg); }
+
+/* Effet flash au clic */
+.flash {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, rgba(93, 177, 126, 0.4), transparent);
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+  pointer-events: none;
+  z-index: 2;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.flash.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.circle-container {
+  transition: transform 1s ease-in-out;
+}
+
+.rotate {
+  transform: rotate(360deg);
+}
+
+/* ====================== */
+/*   Expérience           */
+/* ====================== */
+
+.job-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Bulle de dialogue */
+.speech-bubble {
+  position: relative;
+  background: #eef6ec;
+  color: #2b2b2b;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 40px auto 20px;
+  font-style: italic;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-top-color: #eef6ec;
+  border-bottom: 0;
+  margin-left: -15px;
+  margin-bottom: -15px;
+}
+
+/* ====================== */
+/*   Formation / Timeline */
+/* ====================== */
+.timeline {
+  position: relative;
+  margin: 40px auto;
+  padding-left: 20px;
+  border-left: 3px solid #7b8f79; /* Vert désaturé, professionnel */
+  max-width: 600px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -11px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: #627a65; /* Vert olive foncé */
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 3px rgba(123, 143, 121, 0.25);
+}
+
+.timeline-content {
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+}
+
+/* ====================== */
+/*   Projets              */
+/* ====================== */
+.project-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 40px;
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-img {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.project-info {
+  padding: 15px;
+}
+
+.badges span {
+  background-color: #607e6d; /* Badges vert-gris sobre */
+  color: #ffffff;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  margin: 3px;
+  display: inline-block;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2e2e2e;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #4a634e;
+}
+
+/* Cartes de chargement */
+.loading-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  background: linear-gradient(135deg, #f7f7f7, #dddddd);
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.loading-animation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loader-circle {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ccc;
+  border-top: 4px solid #6a8c78; /* Couleur sobre et cohérente */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  font-style: italic;
+  font-size: 0.9em;
+  color: #6a6a6a;
+}
+
+/* Bulles d'arrière-plan */
+.bubble-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* ====================== */
+/*   Contact              */
+/* ====================== */
+#contact {
+  background-color: #f7f7f7;
+  padding: 60px 20px;
+  text-align: center;
+  color: #2b2b2b;
+}
+
+#contact h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+#contact p {
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.contact-infos ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.contact-infos li {
+  margin: 10px 0;
+  font-size: 1em;
+  color: #3c3c3c;
+}
+
+.contact-infos i {
+  margin-right: 8px;
+  color: #7b8f79; /* Vert olive doux, discret */
+}
+
+.contact-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 500px) {
+  .contact-cta {
+    flex-direction: row;
+  }
+}
+
+.contact-btn {
+  padding: 12px 25px;
+  border: none;
+  background-color: #5a7c6d;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #4c6a5c;
+}
+
+.contact-btn.download {
+  background-color: #3e5e4f;
+}
+
+.contact-btn.download:hover {
+  background-color: #2f4e40;
+}
+
+/* =================== MODE SOMBRE COMPLET =================== */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* Textes */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode span {
+  color: #f0f0f0;
+}
+
+/* Liens */
+body.dark-mode a {
+  color: #90caf9;
+}
+body.dark-mode a:hover {
+  color: #64b5f6;
+}
+
+/* Navigation */
+body.dark-mode .navbar {
+  background-color: #1e1e1e;
+}
+body.dark-mode .nav-links a {
+  color: #f0f0f0;
+}
+body.dark-mode .theme-btn {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+/* Hero */
+body.dark-mode .hero {
+  background: linear-gradient(to right, #2c3e50, #4c4c4c);
+  color: #f2f2f2;
+}
+
+/* Sections (générique) */
+body.dark-mode .section,
+body.dark-mode .circle-container,
+body.dark-mode .project-card,
+body.dark-mode .timeline-content,
+body.dark-mode .job-card,
+body.dark-mode .apprentissage-section,
+body.dark-mode .apprentissage-pitch,
+body.dark-mode #contact,
+body.dark-mode .speech-bubble {
+  background-color: #1e1e1e;
+  color: #000000;
+  border-color: #444;
+}
+
+/* Titres */
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #e78fe7;
+}
+
+/* Progress bars */
+body.dark-mode .progress {
+  background-color: #333;
+}
+body.dark-mode .progress-bar {
+  background: linear-gradient(90deg, #66ffcc, #c785f7);
+}
+
+/* Cercles compétences */
+body.dark-mode .circle-item {
+  background-color: #2c2c2c;
+  color: #ccffcc;
+  border-color: #555;
+}
+
+/* Timeline */
+body.dark-mode .timeline {
+  border-left-color: #555;
+}
+body.dark-mode .timeline-dot {
+  background-color: #90caf9;
+}
+
+/* Bulles d'idées */
+body.dark-mode .speech-bubble {
+  background: #333;
+  color: #f0f0f0;
+}
+body.dark-mode .speech-bubble::after {
+  border-top-color: #333;
+}
+
+/* Boutons */
+body.dark-mode .contact-btn {
+  background-color: #66cc99;
+  color: #121212;
+}
+body.dark-mode .contact-btn:hover {
+  background-color: #55b388;
+}
+body.dark-mode .contact-btn.download {
+  background-color: #4caf50;
+}
+body.dark-mode .contact-btn.download:hover {
+  background-color: #3e8e41;
+}
+
+/* Apprentissage */
+body.dark-mode .apprentissage-banner {
+  background: #ee8dd9;
+  color: #121212;
+}
+body.dark-mode .apprentissage-pitch {
+  background-color: #1f1f1f;
+  color: #fff8f8;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+body.dark-mode .apprentissage-intro {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+  border-color: #66cc99;
+  box-shadow:  4px 4px 0 #66cc99;
+}
+
+/* Fun Fact */
+body.dark-mode #funfact {
+  background: #2d2d2d;
+}
+body.dark-mode #fact-text {
+  color: #eaeaea;
+}
+body.dark-mode #new-fact {
+  background-color: #66cc99;
+  color: #121212;
+}
+
+/* Bulles animées */
+body.dark-mode .bubble {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Chargement */
+body.dark-mode .loading-card {
+  background-color: #2c2c2c;
+}
+
+/* Autres ajustements */
+body.dark-mode .clock {
+  color: #66cc99;
+}
+
+
+/* === Variables couleurs === */
+:root {
+  --bg-color: #f0f0f0;
+  --text-color: #222;
+  --primary-color: #0d0d0f;
+  --halo-bg: rgba(255, 255, 255, 0.3);
+  --bubble-bg: rgba(5, 6, 6, 0.4);
+  --flash-color: #020202;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #eee;
+  --primary-color: #3399ff;
+  --halo-bg: rgba(255, 255, 255, 0.1);
+  --bubble-bg: rgba(100, 180, 255, 0.3);
+  --flash-color: #55ccff;
+}
+
+/* === Corps de la page === */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* === Halo lumineux qui suit la souris === */
+.light {
+  position: fixed;
+  pointer-events: none;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--halo-bg);
+  mix-blend-mode: screen;
+  filter: blur(40px);
+  transform: translate(-50%, -50%);
+  transition: background 0.3s ease;
+  z-index: 1000;
+}
+
+/* === Bouton toggle mode sombre === */
+#darkModeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--primary-color);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1100;
+}
+#darkModeToggle:hover {
+  background: #000000;
+  box-shadow: 0 0 20px #000000;
+}
+
+/* === Conteneur cercle compétences === */
+#circleContainer {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 100px auto;
+  border-radius: 50%;
+  background: var(rgb(36, 197, 127));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.4s ease;
+}
+
+/* Rotation animation */
+#circleContainer.rotate {
+  animation: rotateAnim 1s linear forwards;
+}
+
+@keyframes rotateAnim {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Items dans le cercle */
+.circle-item {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #3a4f41;;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(52, 45, 45, 0.1);
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Positions circulaires */
+.circle-item:nth-child(2) { transform: rotate(0deg) translate(120px) rotate(0deg); }
+.circle-item:nth-child(3) { transform: rotate(90deg) translate(120px) rotate(-90deg); }
+.circle-item:nth-child(4) { transform: rotate(180deg) translate(120px) rotate(-180deg); }
+.circle-item:nth-child(5) { transform: rotate(270deg) translate(120px) rotate(-270deg); }
+.flash {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, #5fc19088, transparent);
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+  pointer-events: none;
+  z-index: 2;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.flash.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.5);
+}
+.circle-container {
+  transition: transform 1s ease-in-out;
+}
+.rotate {
+  transform: rotate(360deg);
+}
+
+
+/* === Effet flash lumineux lors du clic === */
+#flashEffect {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--flash-color);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+#flashEffect.active {
+  animation: flashAnim 1s forwards;
+}
+
+@keyframes flashAnim {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 0.6; }
+}
+
+/* === Texte changeant dans la carte quiz === */
+#quizLoader {
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2em;
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode #quizLoader {
+  background: #222;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  color: var(--text-color);
+}
+
+/* === Bulles d’animation d’arrière-plan === */
+#bubbles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.bubble {
+  position: fixed;
+  bottom: 0;
+  background: var(--bubble-bg);
+  border-radius: 50%;
+  animation-name: rise;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rise {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+/* === Coins arrondis globaux === */
+* {
+  border-radius: 12px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+} 
+
+
+
+/* === Bannieres === */
+
+/* === Bannieres en MODE JOUR === */
+
+body.light-mode {
+  background-color: #6c962d; /* fond général doux */
+  color: #222; /* texte principal */
+}
+
+/* Bannière 1 : Menu */
+.navbar.main-banner {
+  background-color: #000000; /* vert très clair */
+  padding: 10px 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar.main-banner .nav-links li a {
+  color: #2c3e50; /* bleu-gris élégant */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.navbar.main-banner .nav-links li a:hover {
+  color: #006d77; /* vert/bleu foncé au survol */
+  text-decoration: underline;
+}
+
+/* Bannière 2 : Horloge + bouton mode nuit */
+.middle-banner {
+  background-color: #d8e2dc; /* fond beige/rosé doux */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 8px 0;
+  font-size: 0.8rem;
+}
+
+.middle-banner #clock {
+  color: #34495e; /* gris foncé/bleuté */
+  font-weight: bold;
+  font-size: 1.2rem;
+  min-width: 90px;
+  text-align: center;
+}
+
+.middle-banner .theme-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #34495e;
+  transition: color 0.3s ease;
+}
+
+.middle-banner .theme-btn:hover {
+  color: #006d77;
+}
+
+/* Bannière 3 : Apprentissage */
+.apprentissage-banner {
+  background-color: #b5838d; /* rose doux pro */
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}

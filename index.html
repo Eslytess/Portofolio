@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio - Alison Da Rocha</title>
+
+  <!-- Feuille de style principale -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Bibliothèque d'icônes Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <style>
+    /* Styles pour les 3 bannières */
+    .banniere-large {
+      background-color: #000000;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      border-bottom: 2px solid #fffbfb;
+    }
+    .banniere-menu a {
+      margin: 0 10px;
+      color: #fffdfd;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .banniere-menu a:hover {
+      text-decoration: underline;
+    }
+    .banniere-centree {
+      background-color: #000000;
+      padding: 8px;
+      width: 50%;
+      margin: 10px auto;
+      text-align: center;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      font-size: 1rem;
+    }
+    .theme-btn {
+      cursor: pointer;
+      font-size: 1.2rem;
+      background: none;
+      border: none;
+    }
+    .clock {
+      font-family: monospace;
+      font-weight: 700;
+    }
+    .apprentissage-banner {
+      background-color: #000000;
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding: 15px;
+      border-bottom: 2px solid #ffffff;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Effet lumineux qui suit la souris -->
+  <div class="light"></div>
+
+  <!-- Barre de navigation -->
+
+  <nav class="navbar">
+
+    <!-- Bannière 1 : Menu lien Présentation  Compétences  Expériences  Formation Projets  Contact -->
+    <div class="banniere-large">
+      <nav class="banniere-menu">
+        <a href="#about">Présentation</a> |
+        <a href="#skills">Compétences</a> |
+        <a href="#experience">Expérience</a> |
+        <a href="#education">Formation</a> |
+        <a href="#projects">Projets</a> |
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Bannière 2 (centrée, plus petite) : bouton nuit + horloge -->
+    <div class="banniere-centree">
+      <button id="theme-toggle-banner" class="theme-btn">🌙</button>
+      <div id="clock-banner" class="clock"></div>
+    </div>
+
+    <!-- Bannière 3 : Message apprentissage -->
+    <div class="apprentissage-banner">
+      🎯 En recherche active d’un contrat en apprentissage dans le développement web !
+    </div>
+
+  </nav>
+  <!-- Section Présentation -->
+
+  <header class="hero" id="about">
+
+    <h1>Bonjour, je suis</h1>  
+
+    <h2><span class="typewriter">Alison Da Rocha</span></h2>
+
+    <p>
+
+      En reconversion dans le développement web, je me forme seule avec passion.<br>
+
+      Mon objectif : devenir développeuse web polyvalente et créative.
+
+    </p>
+
+  </header>
+
+  <section class="apprentissage-intro">
+    <h2>🎯 Envie de grandir et d’apprendre en alternance</h2>
+    <p>
+      Actuellement en reconversion, je cherche un contrat en alternance pour mettre en pratique mes compétences naissantes en <strong>développement web</strong>.
+      Motivée, autonome et curieuse, je suis prête à relever de nouveaux défis.
+    </p>
+  </section>
+
+  <!-- Section Fun Fact -->
+
+  <section id="funfact">
+
+    <h2>Fun Fact ✨</h2>
+
+    <p id="fact-text">Chargement d'une pensée ...</p>
+
+    <button id="new-fact">Nouveau Fun Fact</button>
+
+  </section>
+
+
+
+  <!-- Section Compétences techniques -->
+
+  <section id="skills">
+
+    <h3>Techniques (niveau débutante)</h3>
+
+
+
+    <div class="skill">
+
+      <p>HTML</p>
+
+      <div class="progress"><div class="progress-bar" data-skill="80%"></div></div>
+
+    </div>
+
+
+
+    <div class="skill">
+
+      <p>CSS</p>
+
+      <div class="progress"><div class="progress-bar" data-skill="70%"></div></div>
+
+    </div>
+
+
+
+    <div class="skill">
+
+      <p>JavaScript</p>
+
+      <div class="progress"><div class="progress-bar" data-skill="40%"></div></div>
+
+    </div>
+
+
+
+    <div class="skill">
+
+      <p>Git / GitHub</p>
+
+      <div class="progress"><div class="progress-bar" data-skill="30%"></div></div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- Compétences personnelles -->
+
+  <section id="personal-skills">
+
+    <h3>Compétences personnelles</h3>
+
+    <div class="circle-container" id="circleContainer">
+
+      <div class="flash" id="flashEffect"></div>
+
+      <div class="circle-item">Autonomie</div>
+
+      <div class="circle-item">Curiosité</div>
+
+      <div class="circle-item">Persévérance</div>
+
+      <div class="circle-item">Polyvalence</div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- Expérience professionnelle -->
+
+  <section id="experience">
+
+    <h2>Expérience Professionnelle</h2>
+
+
+
+    <div class="job-card">
+
+      <h3>Commerciale – Secteur B2C</h3>
+
+      <p>
+
+        Développement de la relation client, analyse des besoins, négociation jusqu'à la conclusion.  
+
+        <strong>Objectif :</strong> Créer une expérience client fluide et personnalisée.  
+
+        <em>💬 Résultat : 25% d’amélioration du taux de fidélisation sur 6 mois.</em>
+
+      </p>
+
+    </div>
+
+
+
+    <div class="job-card">
+
+      <h3>Cheffe d’équipe – Animatrice</h3>
+
+      <p>
+
+        Gestion d’une équipe de 10 à 20 personnes. Formations et explication du postes. Controle qualité des sites.
+
+        <strong>Compétences clés :</strong> communication, réactivité, gestion de crise.  
+
+        <em>🎯 Une capacité à garder le sourire même sous pression !</em>
+
+      </p>
+
+    </div>
+
+
+
+    <!-- Explication de la sélection -->
+
+    <div class="speech-bubble">
+
+      <p>
+
+        Mon parcours professionnel est riche et varié : j’ai été responsable de magasin, de salle de sport, agent de crématorium, etc.
+
+        J’ai opté pour une présentation plus concise, orientée vers mon nouveau projet.
+
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- Section Formation -->
+
+  <section id="education">
+
+    <h2>Formation</h2>
+
+    <div class="timeline">
+
+
+
+      <div class="timeline-item fade">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+
+          <h3>2025 - Arinfo</h3>
+
+          <p>Formation Développeur Web : HTML, CSS, JS, PHP, MySQL, Git</p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="timeline-item fade">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+
+          <h3>2020 - Certificat Animation (BAFA)</h3>
+
+          <p>Encadrement jeunesse, gestion de groupes, pédagogie</p>
+
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- Section Projets -->
+
+  <section id="projects">
+
+    <h2>Mes Projets</h2>
+
+
+
+    <div class="bubble-container" id="bubbles"></div>
+
+
+
+    <div class="project-grid">
+
+      <!-- Projet terminé -->
+
+      <div class="project-card">
+
+        <div class="project-img" style="background-image: url('images/portfolio.png');"></div>
+
+        <div class="project-info">
+
+          <h3>Portfolio Web</h3>
+
+          <p>Site personnel responsive avec dark mode, horloge, animation et plus.</p>
+
+          <div class="badges"><span>HTML</span><span>CSS</span><span>JS</span></div>
+
+          <a href="https://github.com/eslytess/portfolio" target="_blank" class="project-link">Voir le code</a>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- En préparation -->
+
+      <div class="project-card loading-card">
+
+        <div class="loading-animation">
+
+          <div class="loader-circle"></div>
+
+          <p class="loading-text">Quiz Série .. bientôt en ligne !</p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="project-card loading-card">
+
+        <div class="loading-animation">
+
+          <div class="loader-circle"></div>
+
+          <p class="loading-text">Jeu éducatif pour enfants... bientôt en ligne !</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- Section Contact -->
+
+  <section id="contact">
+
+    <h2>Contact</h2>
+
+    <p>Tu souhaites en savoir plus ? Je suis toujours ouverte à la discussion ✉️</p>
+
+
+
+    <div class="contact-infos">
+
+      <ul>
+
+        <li><i class="fab fa-github"></i> <a href="https://github.com/eslytess" target="_blank">Mon GitHub</a></li>
+
+      </ul>
+
+    </div>
+
+
+
+    <div class="contact-cta">
+
+      <a href="mailto:eslytess@icloud.com" class="contact-btn">📬 Me contacter</a>
+
+      <a href="CV_Alison_Da_Rocha.pdf" class="contact-btn download" download>📄 Télécharger mon CV</a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- Pied de page -->
+
+  <footer>
+
+    <p>&copy; 2025 Alison Da Rocha</p>
+
+  </footer>
+
+
+
+  <!-- ===================== Scripts ====================== -->
+
+
+
+  <!-- Machine à écrire -->
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const element = document.querySelector('.typewriter');
+
+      const text = element.textContent;
+
+      element.textContent = "";
+
+      let i = 0;
+
+      function type() {
+
+        if (i < text.length) {
+
+          element.textContent += text.charAt(i);
+
+          i++;
+
+          setTimeout(type, 100);
+
+        }
+
+      }
+
+      type();
+
+    });
+
+  </script>
+
+
+
+  <!-- Mode sombre -->
+
+  <script>
+    const toggle = document.getElementById('theme-toggle-banner');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    });
+   </script>
+
+
+
+  <!-- Horloge -->
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const heures = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const secondes = String(now.getSeconds()).padStart(2, '0');
+      const horloge = document.getElementById('clock-banner');
+      if (horloge) {
+        horloge.textContent = `${heures}:${minutes}:${secondes}`;
+      }
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+   </script>
+
+
+
+  <!-- Fun Fact -->
+
+  <script>
+
+    const facts = [
+
+      "Tu ne peux pas sourire en fronçant les sourcils (essaye !)",
+
+      "Le premier site web date de 1991… et il existe encore !",
+
+      "Le mot ‘bug’ vient d’un insecte réel trouvé dans un ordi 🪲",
+
+      "Les dauphins dorment avec un œil ouvert 👁",
+
+      "La curiosité est le moteur secret des développeurs 😉",
+
+      "Tu viens de cliquer sur un petit moment de magie ✨",
+
+      "Le HTML n’est pas un langage de programmation, mais CSS non plus ! 😅"
+
+    ];
+
+    const factText = document.getElementById("fact-text");
+
+    const newFactBtn = document.getElementById("new-fact");
+
+    function generateFact() {
+
+      const randomIndex = Math.floor(Math.random() * facts.length);
+
+      factText.textContent = facts[randomIndex];
+
+    }
+
+    window.addEventListener("load", generateFact);
+
+    newFactBtn.addEventListener("click", generateFact);
+
+  </script>
+
+
+
+  <!-- Barres de compétences -->
+
+  <script>
+
+    function animateProgressBars() {
+
+      document.querySelectorAll('.progress-bar').forEach(bar => {
+
+        bar.style.width = bar.getAttribute('data-skill');
+
+      });
+
+    }
+
+    window.addEventListener('load', animateProgressBars);
+
+  </script>
+
+
+
+  <!-- Animation compétences personnelles -->
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const container = document.getElementById('circleContainer');
+
+      const items = document.querySelectorAll('.circle-item');
+
+      const flash = document.getElementById('flashEffect');
+
+
+
+      items.forEach(item => {
+
+        item.addEventListener('click', () => {
+
+          container.classList.add('rotate');
+
+          flash.classList.add('active');
+
+          setTimeout(() => {
+
+            container.classList.remove('rotate');
+
+            flash.classList.remove('active');
+
+          }, 1000);
+
+        });
+
+      });
+
+    });
+
+  </script>
+
+
+
+
+
+<script>
+
+  // Quand on clique sur le bouton flottant, on scroll vers la section apprentissage
+
+  const floatBtn = document.getElementById("apprentissage-float");
+
+  floatBtn.addEventListener("click", () => {
+
+    document.getElementById("apprentissage").scrollIntoView({ behavior: "smooth" });
+
+  });
+
+</script>
+
+</body>
+
+</html>
