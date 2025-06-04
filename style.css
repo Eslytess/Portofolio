@@ -1009,3 +1009,86 @@ body.light-mode {
   font-size: 1rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
+
+/* ====================== */
+/*  Responsive Mobile     */
+/* ====================== */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 1em;
+  }
+
+  .nav-links a {
+    padding: 0.5em 0;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Hero */
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Section */
+  section {
+    padding: 40px 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Compétences circulaires */
+  #personal-skills .circle-container {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .circle-item {
+    position: static !important;
+    transform: none !important;
+  }
+
+  /* Timeline */
+  .timeline {
+    padding-left: 10px;
+    border-left-width: 2px;
+  }
+
+  .timeline-dot {
+    width: 15px;
+    height: 15px;
+    left: -9px;
+  }
+
+  .timeline-content {
+    padding: 10px 15px;
+  }
+
+  /* Projets */
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact */
+  .contact-infos ul {
+    text-align: left;
+  }
+
+  .contact-cta {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
