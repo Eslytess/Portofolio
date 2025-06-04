@@ -1009,15 +1009,3 @@ body.light-mode {
   font-size: 1rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
-
-@media (max-width: 768px) {
-  body, html {
-    overflow-x: hidden;
-  }
-
-  /* Optionnel : pour identifier l'élément qui déborde */
-  * {
-    outline: 1px solid rgb(0, 0, 0);
-  }
-}
